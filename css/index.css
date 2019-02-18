@@ -240,11 +240,13 @@ body {
 .hide {
     z-index: 99999999 !important;
     position: fixed;
-    right: auto;
     min-width: 1000px;
-    left: 3.0000%;
+    /* left: 3.0000%; */
     right: auto;
-    top:850px;
+    /* top:850px; */
+
+    left: 5.0000%;
+    top: 600px;
     transition: all .6s ease-in;
 }
 /* 400px*/
