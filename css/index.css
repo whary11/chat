@@ -180,7 +180,7 @@ body {
 .bottom_wrapper .message_input_wrapper {
   display: inline-block;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid #bcbdc0;
   width: calc(100% - 160px);
   position: relative;
@@ -231,7 +231,6 @@ body {
   color:#A6A5A5;
   font-style: italic;
   font-size: 10px;
-  /* margin-top: -10px; */
 }
 
 
@@ -241,17 +240,42 @@ body {
     z-index: 99999999 !important;
     position: fixed;
     min-width: 1000px;
-    /* left: 3.0000%; */
+    left: 3.0000%;
     right: auto;
-    /* top:850px; */
+    top:850px;
 
-    left: 5.0000%;
-    top: 600px;
+    /* left: 5.0000%;
+    top: 600px; */
     transition: all .6s ease-in;
 }
 /* 400px*/
 
 .show{
   top:400px;
-  transition: all .6s ease-in;
+  z-index: 99999999 !important;
+    position: fixed;
+    min-width: 1000px;
+    left: 3.0000%;
+    right: auto;
+    /* left: 5.0000%;
+    top: 600px; */
+    transition: all .6s ease-in;
+  /* transition: all .6s ease-in; */
+}
+@media only screen and (max-width: 1200px) {
+  .hide {
+    left: 8.0000%;
+    top: 800px;
+
+  }
+  .chat_window {
+    bottom: -40px;
+    /* top: 0px; */
+  }
+
+  .show {
+    left: 8.0000%;
+    top: 340px;
+
+  }
 }

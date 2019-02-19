@@ -59,7 +59,8 @@
 
 
 $('.maximize').click(()=>{
-    $('.hide').addClass('show')
+    $('#control').removeClass('hide')
+    $('#control').addClass('show')
     $('.title').text('Chat')
     $('.title').css({
         fontSize:'20px'
@@ -67,7 +68,8 @@ $('.maximize').click(()=>{
 })
 
 $('.close').click(()=>{
-    $('.hide').removeClass('show')
+    $('#control').removeClass('show')
+    $('#control').addClass('hide')
     $('.title').text('Estamos en Linea....')
 
 })
