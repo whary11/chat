@@ -265,7 +265,7 @@ body {
 @media only screen and (max-width: 1200px) {
   .hide {
     left: 8.0000%;
-    top: 800px;
+    top: 920px;
 
   }
   .chat_window {
@@ -275,7 +275,22 @@ body {
 
   .show {
     left: 8.0000%;
-    top: 340px;
+    top: 470px;
+  }
+}
 
+@media only screen and (min-width: 412px) {
+  .hide {
+    left: 8.0000%;
+    top: 920px;
+
+  }
+  .chat_window {
+    bottom: -40px;
+  }
+
+  .show {
+    left: 8.0000%;
+    top: 800px;
   }
 }
