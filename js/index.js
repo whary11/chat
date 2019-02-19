@@ -63,7 +63,7 @@ $('.maximize').click(()=>{
     $('#control').addClass('show')
     $('.title').text('Chat')
     $('.title').css({
-        fontSize:'20px'
+        fontSize:'15px'
     })
 })
 
