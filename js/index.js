@@ -79,9 +79,7 @@
             message_side = message_side === 'left' ? 'right' : 'left';
 
             enviarMensaje(data)
-            // return $messages.animate({
-            //     scrollTop: $messages.prop('scrollHeight')
-            // }, 300);
+
         };
 
 
@@ -115,9 +113,9 @@
             return guardarMessage();
         });
         $('.message_input').keyup(function (e) {
-            if (e.which === 13) {
-                return sendMessage(getMessageText());
-            }
+            // if (e.which === 13) {
+            //     return sendMessage(getMessageText());
+            // }
         });
 
         // Leer mensajes de la db y dejar escucha de cambios
@@ -130,14 +128,6 @@
             });
         });
     });
-
-
-
-
-
-
-
-    sendMessage('jkbasjdb')
 
 }.call(this));
 
@@ -162,24 +152,3 @@ $('.close').click(() => {
 
 })
 
-leerMensajes();
-
-
-function enviarMensaje(data) {
-    db.collection("chat").add({
-            nombre: data.nombre,
-            fecha: new Date,
-            mensaje: data.mensaje
-        })
-        .then(function (docRef) {
-            console.log("Document written with ID: ", docRef.id);
-        })
-        .catch(function (error) {
-            console.error("Error adding document: ", error);
-        });
-}
-
-
-function leerMensajes() {
-
-}
