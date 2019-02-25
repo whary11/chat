@@ -32,7 +32,7 @@ moment.locale('es');
                 var $message;
                 $message = $($('.message_template').clone().html());
                 $message.addClass(_this.message_side).find('.text').html(_this.text);
-                $message.find('.fecha').html(_this.fecha);
+                $message.find('.fecha').html(moment(_this.fecha).startOf('hour').fromNow());
                 
                 $('.messages').append($message);
                 return setTimeout(function () {
@@ -128,10 +128,10 @@ moment.locale('es');
         });
 
         // Leer mensajes de la db y dejar escucha de cambios
-        db.collection("chat").orderBy("fecha", "asc").onSnapshot((querySnapshot) => {
+        db.collection("chat").orderBy("fecha", "asc").limit(3).onSnapshot((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 setTimeout(function () {
-                    return sendMessage(doc.data().mensaje, moment().fromNow(doc.data().fecha));
+                    return sendMessage(doc.data().mensaje, doc.data().fecha);
                 }, 1000);
             });
         });
